@@ -77,4 +77,7 @@ jobs:
     - name: load code and run tests
       shell: bash
       run: |
+        # run a hand-made test suite (returns true on success, ERRORs or return NIL on fail)
         run-test-forms -l ci-example2/test "(ci-example2.test:run-tests-for-ci)"
+        # or just test things directly
+        run-test-forms -l ci-example2 "(= (ci-example2:run 3) 4)"

@@ -9,6 +9,6 @@
   ;; add any testing that should run in CI here
   (assert (= (x:run 1) 2))
   (if (= (x:run 2) 3)
-      (progn (format t "test failed~%") nil)
-      t))
+      t
+      (progn (format t "test failed~%") nil)))
 
