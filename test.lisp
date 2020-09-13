@@ -3,7 +3,7 @@
   (:local-nicknames (#:x #:ci-example2))
   (:export #:run-tests-for-ci))
 
-(in-package #:ci-example.test)
+(in-package #:ci-example2.test)
 
 (defun run-tests-for-ci ()
   ;; add any testing that should run in CI here
