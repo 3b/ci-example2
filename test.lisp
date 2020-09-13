@@ -6,9 +6,9 @@
 
 (plan 3)
 
-(= (x:run -1) 0)
-(= (x:run 2) 3)
-(is-error (x:run nil) 'simple-error)
+(is (= (x:run -1) 0))
+(is (= (x:run 2) 3))
+(is-error (x:run nil) 'type-error)
 
 (finalize)
 
