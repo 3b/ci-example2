@@ -1,14 +1,15 @@
 (defpackage #:ci-example2.test
-  (:use #:cl)
-  (:local-nicknames (#:x #:ci-example2))
-  (:export #:run-tests-for-ci))
+  (:use #:cl #:prove)
+  (:local-nicknames (#:x #:ci-example2)))
 
 (in-package #:ci-example2.test)
 
-(defun run-tests-for-ci ()
-  ;; add any testing that should run in CI here
-  (assert (= (x:run 1) 2))
-  (if (= (x:run 2) 3)
-      t
-      (progn (format t "test failed~%") nil)))
+(plan 3)
+
+(= (x:run -1) 0)
+(= (x:run 2) 3)
+(is-error (x:run nil) 'simple-error)
+
+(finalize)
+
 
