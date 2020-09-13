@@ -77,6 +77,5 @@ jobs:
     - name: load code and run tests
       shell: bash
       run: |
-        echo -e "\e[40m\e[31mcolor?\e[49m\e[31mcolor?\e[47m\e[31mcolor?"
-        echo -e "\e[47m\e[31mcolor?" && run-prove ci-example2-test.asd
+        run-prove --without-colors ci-example2-test.asd
 
