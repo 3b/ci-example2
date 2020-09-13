@@ -77,6 +77,5 @@ jobs:
     - name: load code and run tests
       shell: bash
       run: |
-        echo -e "\e[40m" # reset background color
-        run-prove ci-example2-test.asd
+        echo -e '\033[40m" && run-prove ci-example2-test.asd
 
