@@ -6,8 +6,8 @@
 
 (plan 3)
 
-(is (= (x:run -1) 0))
-(is (= (x:run 2) 3))
+(ok (= (x:run -1) 0))
+(is (x:run 2) 3)
 (is-error (x:run nil) 'type-error)
 
 (finalize)
