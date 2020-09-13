@@ -77,4 +77,4 @@ jobs:
     - name: load code and run tests
       shell: bash
       run: |
-        run-test-forms -l ci-examples2/test "(ci-example2.test:run-tests-for-ci)"
+        run-test-forms -l ci-example2/test "(ci-example2.test:run-tests-for-ci)"
